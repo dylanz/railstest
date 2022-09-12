@@ -1,2 +1,8 @@
-runtime: ruby26
-entrypoint: bundle exec rails server -p 8080 -e production
+runtime: ruby
+env: flex
+entrypoint: bundle exec rails server -p $PORT -e production
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\.git/.*$
